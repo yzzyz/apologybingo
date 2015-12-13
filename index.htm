@@ -32,42 +32,42 @@
 		<center>
 			<h1>HH <em>"Response"</em> Bingo</h1>
 			<p><strong>ATTENTION MLH:</strong> Your logo is used as part of a parody. Mostly making fun of how closely you work with HH on top of your own ridiculous non-responses.</p>
-			<noscript><h2>Need JavaScript to randomize cells</h2></noscript>
+			<p id="norandom"><strong>Your bingo card is not randomized!</strong></p>
 			<table class="bingotable">
 				<tr class="bingorow">
-					<td class="bingocell" id="r1">tes testestestst</td>
-					<td class="bingocell" id="r2"></td>
-					<td class="bingocell" id="r3"></td>
-					<td class="bingocell" id="r4"></td>
-					<td class="bingocell" id="r5"></td>
+					<td class="bingocell" id="r1">Can never find a way to repay former admins for their work/td>
+					<td class="bingocell" id="r2">Willing to have a one-on-one call to discuss (bonus: says no witnesses)</td>
+					<td class="bingocell" id="r3">Posts at an obscure time of day</td>
+					<td class="bingocell" id="r4">Removing people from admin team before posting</td>
+					<td class="bingocell" id="r5">Cites reputable but irrelevant source as justification</td>
 				</tr>
 				<tr class="bingorow">
-					<td class="bingocell" id="r6"></td>
-					<td class="bingocell" id="r7"></td>
-					<td class="bingocell" id="r8"></td>
-					<td class="bingocell" id="r9"></td>
-					<td class="bingocell" id="r10"></td>
+					<td class="bingocell" id="r6">Gives JB a meaningless compliment without really apologizing</td>
+					<td class="bingocell" id="r7">Needs to "pass the torch" to puppet governance</td>
+					<td class="bingocell" id="r8">Apology took too long because the issue gave Dave personal trouble</td>
+					<td class="bingocell" id="r9">Too busy because of Hack Club</td>
+					<td class="bingocell" id="r10">Too busy because of MHacks</td>
 				</tr>
 				<tr class="bingorow">
-					<td class="bingocell" id="r11"></td>
-					<td class="bingocell" id="r12"></td>
+					<td class="bingocell" id="r11">Dave is joining MLH</td>
+					<td class="bingocell" id="r12">Needed to talk to everyone except JB</td>
 					<td id="free"></td>
-					<td class="bingocell" id="r14"></td>
-					<td class="bingocell" id="r15"></td>
+					<td class="bingocell" id="r14">Says he cares about diversity</td>
+					<td class="bingocell" id="r15">Wants you to feel heard</td>
 				</tr>
 				<tr class="bingorow">
-					<td class="bingocell" id="r16"></td>
-					<td class="bingocell" id="r17"></td>
-					<td class="bingocell" id="r18"></td>
-					<td class="bingocell" id="r19"></td>
-					<td class="bingocell" id="r20"></td>
+					<td class="bingocell" id="r16">People he lives with are still admins</td>
+					<td class="bingocell" id="r17">Condemns protests like Rodney\'s against these kinds of situations</td>
+					<td class="bingocell" id="r18">Trying to be "the adult" in the situation</td>
+					<td class="bingocell" id="r19">"These things take time"</td>
+					<td class="bingocell" id="r20">MLH team trips over themselves to like it</td>
 				</tr>
 				<tr class="bingorow">
-					<td class="bingocell" id="r21"></td>
-					<td class="bingocell" id="r22"></td>
-					<td class="bingocell" id="r23"></td>
-					<td class="bingocell" id="r24"></td>
-					<td class="bingocell" id="r25"></td>
+					<td class="bingocell" id="r21">"Misunderstanding"</td>
+					<td class="bingocell" id="r22">"Communication"</td>
+					<td class="bingocell" id="r23">Asks community to calm down/heated rhetoric</td>
+					<td class="bingocell" id="r24">HH is merging with MLH</td>
+					<td class="bingocell" id="r25">Retains founder privilege anyway</td>
 				</tr>
 			</table>
 		</center>
@@ -119,9 +119,10 @@
 			el.innerText = reason;
 		}
 
+		$('#norandom').hide();
 		$('.bingocell').click(function() {
 			$(this).toggleClass('selected');
-		})
+		});
 		</script>
 	</body>
 </html>
