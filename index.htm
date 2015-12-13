@@ -10,6 +10,8 @@
 			table, th, td {
 				border: 1px solid black;
 			}
+
+			@media screen {
 			td {
 				padding: 1em;
 				width: 150px; max-width: 150px;
@@ -26,12 +28,46 @@
 				background-image: url("mlh-full.png");
 				background-size: 150px;
 			}
+			#printstuff {
+				display: none;
+			}
+			}
+
+			@media print {
+				td {
+					padding: 0.75em;
+					width: 125px; max-width: 125px;
+					height: 125px; max-width: 125px;
+					font-size: 0.8em;
+					text-align: center;
+				}
+				.selected {
+					background-image: url("mlh-full.png");
+					background-color: #fcfcfc;
+					background-size: 150px;
+				}
+				#free:after {
+					content: "FREE SPACE";
+				}
+				#norandom { display: none; }
+				#mlhplsnosue { display: none; }
+				#printstuff {
+					display: block;
+					text-align: center;
+					margin: 10px;
+				}
+				#printstuff img {
+					border: 1px solid #000;
+					margin: 5px;
+					padding: 8px;
+				}
+			}
 		</style>
 	</head>
 	<body>
 		<center>
 			<h1>HH <em>"Response"</em> Bingo</h1>
-			<marquee>ATTENTION MLH: Your logo is used as part of a parody. Mostly making fun of how closely you work with HH on top of your own ridiculous non-responses.</marquee>
+			<marquee id="mlhplsnosue">ATTENTION MLH: Your logo is used as part of a parody. Mostly making fun of how closely you work with HH on top of your own ridiculous non-responses.</marquee>
 			<p><strong>Bonus points:</strong> Use the Namecheap coupon "RESPONSEBONUS" for every bonus, then feel sad when it doesn't work.</p>
 			<p id="norandom"><strong>Your bingo card is not randomized!</strong></p>
 			<table class="bingotable">
@@ -72,6 +108,36 @@
 				</tr>
 			</table>
 		</center>
+
+		<div id="printstuff">
+		<p>Hello paper players! Although you're too good for interactive media, we've provided an innovative new way to play at home. Simply cut out the MLH&reg; bingo markers below and place them on the appropriate squares.</p>
+
+		<p><img src="mlh-full.png" width="100" height="59" />
+		<img src="mlh-full.png" width="100" height="59" />
+		<img src="mlh-full.png" width="100" height="59" />
+		<img src="mlh-full.png" width="100" height="59" />
+		<img src="mlh-full.png" width="100" height="59" />
+		<img src="mlh-full.png" width="100" height="59" />
+		<img src="mlh-full.png" width="100" height="59" />
+		<img src="mlh-full.png" width="100" height="59" />
+		<img src="mlh-full.png" width="100" height="59" />
+		<img src="mlh-full.png" width="100" height="59" />
+		<img src="mlh-full.png" width="100" height="59" />
+		<img src="mlh-full.png" width="100" height="59" />
+		<img src="mlh-full.png" width="100" height="59" />
+		<img src="mlh-full.png" width="100" height="59" />
+		<img src="mlh-full.png" width="100" height="59" />
+		<img src="mlh-full.png" width="100" height="59" />
+		<img src="mlh-full.png" width="100" height="59" />
+		<img src="mlh-full.png" width="100" height="59" />
+		<img src="mlh-full.png" width="100" height="59" />
+		<img src="mlh-full.png" width="100" height="59" />
+		<img src="mlh-full.png" width="100" height="59" />
+		<img src="mlh-full.png" width="100" height="59" />
+		<img src="mlh-full.png" width="100" height="59" />
+		<img src="mlh-full.png" width="100" height="59" />
+		<img src="mlh-full.png" width="100" height="59" /></p>
+		</div>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<script type="text/javascript">
