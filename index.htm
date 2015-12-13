@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HH Announcement Bingo</title>
+		<style type="text/css">
+			* { box-sizing: border-box; }
+			table {
+				border-collapse: collapse;
+			}
+			table, th, td {
+				border: 1px solid black;
+			}
+			td {
+				padding: 1em;
+				width: 150px;
+				height: 150px;
+				font-size: 1em;
+				text-align: center;
+			}
+			.selected {
+				background: #e9e9e9;
+			}
+		</style>
+	</head>
+	<body>
+		<center>
+			<h1>Dave Apology Bingo</h1>
+			<noscript><h2>Need JavaScript to randomize cells</h2></noscript>
+			<table class="bingotable">
+				<tr class="bingorow">
+					<td class="bingocell" id="r1">tes testestestst</td>
+					<td class="bingocell" id="r2"></td>
+					<td class="bingocell" id="r3"></td>
+					<td class="bingocell" id="r4"></td>
+					<td class="bingocell" id="r5"></td>
+				</tr>
+				<tr class="bingorow">
+					<td class="bingocell" id="r6"></td>
+					<td class="bingocell" id="r7"></td>
+					<td class="bingocell" id="r8"></td>
+					<td class="bingocell" id="r9"></td>
+					<td class="bingocell" id="r10"></td>
+				</tr>
+				<tr class="bingorow">
+					<td class="bingocell" id="r11"></td>
+					<td class="bingocell" id="r12"></td>
+					<td class="selected" id="r13"><strong>FREE SPACE</strong><br />Trying to compensate admins for their service</td>
+					<td class="bingocell" id="r14"></td>
+					<td class="bingocell" id="r15"></td>
+				</tr>
+				<tr class="bingorow">
+					<td class="bingocell" id="r16"></td>
+					<td class="bingocell" id="r17"></td>
+					<td class="bingocell" id="r18"></td>
+					<td class="bingocell" id="r19"></td>
+					<td class="bingocell" id="r20"></td>
+				</tr>
+				<tr class="bingorow">
+					<td class="bingocell" id="r21"></td>
+					<td class="bingocell" id="r22"></td>
+					<td class="bingocell" id="r23"></td>
+					<td class="bingocell" id="r24"></td>
+					<td class="bingocell" id="r25"></td>
+				</tr>
+			</table>
+		</center>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script type="text/javascript">
+		var reasons = [
+			'Can never find a way to repay former admins for their work',
+			'Willing to have a one-on-one call to discuss (bonus: says no witnesses)',
+			'Posts at an obscure time of day',
+			'Removing people from admin team before posting',
+			'Cites reputable but irrelevant source as justification',
+			'Gives JB a meaningless compliment without really apologizing',
+			'Needs to "pass the torch" to puppet governance',
+			'Apology took too long because the issue gave Dave personal trouble',
+			'Too busy because of Hack Club',
+			'Too busy because of MHacks',
+			'Dave is joining MLH',
+			'Needed to talk to everyone except JB',
+			'Says he cares about diversity',
+			'Wants you to feel heard',
+			'People he lives with are still admins',
+			'Condemns protests like Rodney\'s against these kinds of situations',
+			'Trying to be "the adult" in the situation',
+			'"These things take time"',
+			'MLH team trips over themselves to like it',
+			'"Misunderstanding"',
+			'"Communication"',
+			'Asks community to calm down/heated rhetoric',
+			'HH is merging with MLH',
+			'Retains founder privilege anyway',
+			'Community leadership and moderators are different things',
+			'Gives history of HH in the preamble (including revisionist history)',
+			'Medium post',
+			'Writes a haiku/poem/rap (bonus: music video included)',
+			'Compares himself to any tech founder (bonus: Steve Jobs)',
+			'Starts with "When I attended my first hackathon, my life changed forever"'
+		];
+
+		for (var i = 1; i <= 25; i++) {
+			if (i == 13) continue; // free space
+
+			var index = Math.floor(Math.random() * reasons.length);
+			var reason = reasons[index];
+			reasons.splice(index, 1);
+
+			var el = document.getElementById('r' + i);
+			el.innerText = reason;
+		}
+
+		$('.bingocell').click(function() {
+			$(this).toggleClass('selected');
+		})
+		</script>
+	</body>
+</html>
