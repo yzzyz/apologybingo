@@ -12,14 +12,18 @@
 			}
 			td {
 				padding: 1em;
-				width: 150px;
-				height: 150px;
+				width: 150px; max-width: 150px;
+				height: 150px; max-height: 150px;
 				font-size: 1em;
 				text-align: center;
 			}
 			.selected {
 				background-image: url("mlh-logo-small.png");
-				background-color: #e9e9e9;
+				background-color: #fcfcfc;
+				background-size: 150px;
+			}
+			#free {
+				background-image: url("https://mlh.io/brand-assets/logo/mlh-logo-small.png");
 				background-size: 150px;
 			}
 		</style>
@@ -46,7 +50,7 @@
 				<tr class="bingorow">
 					<td class="bingocell" id="r11"></td>
 					<td class="bingocell" id="r12"></td>
-					<td class="selected" id="r13"><strong>FREE SPACE</strong><br />Trying to compensate admins for their service</td>
+					<td id="free"></td>
 					<td class="bingocell" id="r14"></td>
 					<td class="bingocell" id="r15"></td>
 				</tr>
